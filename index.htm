@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Minecraft Armor stand</title>
+    <title>Minecraft 盔甲架生成器</title>
     <meta charset="utf-8">
-    <meta name="description" content="Create poses for Minecraft armor stands in a breeze! Free, fast, open source.">
+    <meta name="description" content="Create poses for Minecraft armorstands in a breeze! Free, fast, open source.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="js/colpick.css">
     <link rel="icon" type="image/png" href="images/icon.png">
 
     <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -29,7 +29,7 @@
     <div class="right card">
 
         <div class="padding underline">
-            <h1>MINECRAFT ARMOR STAND</h1>
+            <h1>MINECRAFT ARMORSTAND</h1>
             <center>
                 <a href="https://github.com/haselkern/Minecraft-ArmorStand" target="_blank"><img src="images/github.png" alt="GitHub" title="GitHub" /></a>
                 <a href="https://www.twitter.com/haselcode" target="_blank"><img src="images/twitter.png" alt="Twitter" title="Twitter" /></a>
@@ -39,7 +39,7 @@
 
         <div class="padding underline">
             <select id="mcversion">
-				<option value="1.13">Minecraft 1.13 and above</option>
+				<option value="1.13">Minecraft 1.13 +</option>
                 <option value="1.11">Minecraft 1.11 &amp; 1.12</option>
                 <option value="1.9">Minecraft 1.9 &amp; 1.10</option>
                 <option value="1.8">Minecraft 1.8</option>
@@ -47,45 +47,45 @@
         </div>
 
         <div class="padding underline">
-            <label><input type="checkbox" name="invisible">Invisible</label><br>
-            <label><input type="checkbox" name="invulnerable">Invulnerable</label><br>
-            <label><input type="checkbox" name="persistencerequired">PersistenceRequired</label><br>
-            <label><input type="checkbox" name="nobaseplate">No Base Plate</label><br>
-            <label><input type="checkbox" name="nogravity">No Gravity</label><br>
-            <label><input type="checkbox" name="showarms">Show Arms</label><br>
-            <label><input type="checkbox" name="small">Small</label><br>
-            <label><input type="checkbox" name="marker">Marker</label><br>
+            <label><input type="checkbox" name="invisible">不可见</label><br>
+            <label><input type="checkbox" name="invulnerable">无法破坏</label><br>
+            <label><input type="checkbox" name="persistencerequired">持久</label><br>
+            <label><input type="checkbox" name="nobaseplate">没有底座</label><br>
+            <label><input type="checkbox" name="nogravity">没有重力</label><br>
+            <label><input type="checkbox" name="showarms">显示胳膊</label><br>
+            <label><input type="checkbox" name="small">小型</label><br>
+            <label><input type="checkbox" name="marker">标记</label><br>
 			<div id="centercorrected">
-				<label><input type="checkbox" id="center-corrected" name="center-corrected">Center-corrected</label><br>
+				<label><input type="checkbox" id="center-corrected" name="center-corrected">中心校正</label><br>
 			</div>
         </div>
 
         <div class="padding underline">
             <table class="rotations">
                 <tr>
-                    <td>Rotation:</td>
+                    <td>旋转:</td>
                     <td colspan="3"><input type="range" name="rotation" min="0" max="360" value="0"></td>
                 </tr>
                 <tr>
-                    <td>Head:</td>
+                    <td>头:</td>
                     <td><input type="range" name="headX" min="0" max="360" value="0"></td>
                     <td><input type="range" name="headY" min="0" max="360" value="0"></td>
                     <td><input type="range" name="headZ" min="0" max="360" value="0"></td>
                 </tr>
                 <tr>
-                    <td>Body:</td>
+                    <td>身体:</td>
                     <td><input type="range" name="bodyX" min="0" max="360" value="0"></td>
                     <td><input type="range" name="bodyY" min="0" max="360" value="0"></td>
                     <td><input type="range" name="bodyZ" min="0" max="360" value="0"></td>
                 </tr>
                 <tr>
-                    <td>Left Leg:</td>
+                    <td>左腿:</td>
                     <td><input type="range" name="leftLegX" min="0" max="360" value="0"></td>
                     <td><input type="range" name="leftLegY" min="0" max="360" value="0"></td>
                     <td><input type="range" name="leftLegZ" min="0" max="360" value="0"></td>
                 </tr>
                 <tr>
-                    <td>Right Leg:</td>
+                    <td>右腿:</td>
                     <td><input type="range" name="rightLegX" min="0" max="360" value="0"></td>
                     <td><input type="range" name="rightLegY" min="0" max="360" value="0"></td>
                     <td><input type="range" name="rightLegZ" min="0" max="360" value="0"></td>
@@ -94,13 +94,13 @@
             <div id="inputarms">
                 <table class="rotations">
                         <tr>
-                            <td>Left Arm:</td>
+                            <td>左胳膊:</td>
                             <td><input type="range" name="leftArmX" min="0" max="360" value="0"></td>
                             <td><input type="range" name="leftArmY" min="0" max="360" value="0"></td>
                             <td><input type="range" name="leftArmZ" min="0" max="360" value="0"></td>
                         </tr>
                         <tr>
-                            <td>Right Arm:</td>
+                            <td>右胳膊:</td>
                             <td><input type="range" name="rightArmX" min="0" max="360" value="0"></td>
                             <td><input type="range" name="rightArmY" min="0" max="360" value="0"></td>
                             <td><input type="range" name="rightArmZ" min="0" max="360" value="0"></td>
@@ -110,16 +110,16 @@
         </div>
 
         <div class="padding underline">
-            <label><input type="checkbox" name="useequipment">Enable equipment</label><br>
+            <label><input type="checkbox" name="useequipment">启用装备</label><br>
             <div id="customequipment">
                 <p>
-                    Enter the text id of an item (for example <i>stone</i> or <i>iron_sword</i>) into the appropriate slots. You can enter an arbitrary item for the head or hand, but the other slots must contain an appropriate item.
+                    在相应的位置输入物品的文本ID（例如<i>stone</i>或<i>iron_sword</i>）。您可以为头部或手部添加任意物品，但其他位置必须包含适当的物品。
                 </p>
 
-                <input type="text" class="equipment" name="equipHandRight" placeholder="Item in right hand">
-                <input type="text" class="equipment" id="equipHandLeft" name="equipHandLeft" placeholder="Item in left hand">
+                <input type="text" class="equipment" name="equipHandRight" placeholder="在右手的物品">
+                <input type="text" class="equipment" id="equipHandLeft" name="equipHandLeft" placeholder="在左手的物品">
 
-                <input type="text" class="equipment" name="equipShoes" placeholder="Boots" list="list-shoes">
+                <input type="text" class="equipment" name="equipShoes" placeholder="靴子" list="list-shoes">
                 <datalist id="list-shoes">
                     <option value="chainmail_boots">
                     <option value="diamond_boots">
@@ -129,7 +129,7 @@
                 </datalist>
                 <div class="colorfield" id="shoecolor"></div>
 
-                <input type="text" class="equipment" name="equipLeggings" placeholder="Leggings" list="list-leggings">
+                <input type="text" class="equipment" name="equipLeggings" placeholder="护腿" list="list-leggings">
                 <datalist id="list-leggings">
                     <option value="chainmail_leggings">
                     <option value="diamond_leggings">
@@ -139,7 +139,7 @@
                 </datalist>
                 <div class="colorfield" id="leggingscolor"></div>
 
-                <input type="text" class="equipment" name="equipChestplate" placeholder="Chestplate" list="list-chestplate">
+                <input type="text" class="equipment" name="equipChestplate" placeholder="胸甲" list="list-chestplate">
                 <datalist id="list-chestplate">
                     <option value="chainmail_chestplate">
                     <option value="diamond_chestplate">
@@ -149,7 +149,7 @@
                 </datalist>
                 <div class="colorfield" id="chestplatecolor"></div>
 
-                <input type="text" class="equipment" name="equipHelmet" placeholder="Helmet" list="list-helmet">
+                <input type="text" class="equipment" name="equipHelmet" placeholder="头盔" list="list-helmet">
                 <datalist id="list-helmet">
                     <option value="turtle_helmet">
                     <option value="chainmail_helmet">
@@ -160,17 +160,17 @@
                 </datalist>
                 <div class="colorfield" id="helmetcolor"></div>
 
-                <br>Helmet specifies
+                <br>指定头部
                 <select id="equipCustomHeadMode">
-                    <option value="item">Item Name</option>
-                    <option value="player">Player Name</option>
-                    <option value="url">Image URL</option>
+                    <option value="item">物品名称</option>
+                    <option value="player">玩家ID</option>
+                    <option value="url">图片URL</option>
                     <option value="givecode">Give Code</option>
                 </select>
 
                 <div id="minecraft-heads">
                     <br>
-                    You can find lots of different heads here. Pick one and copy the <i>Give-Code</i> into the helmet field:
+                    你可以在这里找到许多头颅。选择一个，然后将<i>Give-Code</i>输入到头盔字段中:
                     <br>
                     <a href="http://minecraft-heads.com/" target="_blank"><img src="images/mc-heads.png" alt="minecraft-heads.com" /></a>
                 </div>
@@ -178,14 +178,14 @@
         </div>
 
         <div class="padding underline">
-            <input type="text" name="customname" id="customname" placeholder="Custom name">
-            <label><input type="checkbox" name="showcustomname">Show custom name</label><br>
+            <input type="text" name="customname" id="customname" placeholder="自定义名称">
+            <label><input type="checkbox" name="showcustomname">显示自定义名称</label><br>
 			<div id="namecustomization">
 				<p>
-					In 1.13, you can now add formats to the name tags.
-					Enter the color id (for example red, dark_blue) in the name color field to give it a color.
+                    在1.13中，您现在可以向名称标签添加颜色。
+                    在名称的颜色字段中输入颜色ID（例如red，dark_blue）以为其指定颜色。
 				</p>
-				<input type="text" name="namecolor" id="namecolor" placeholder="Name color" list="list-colors">
+				<input type="text" name="namecolor" id="namecolor" placeholder="名称颜色" list="list-colors">
 				<datalist id="list-colors">
 					<option value="aqua">
 					<option value="black">
@@ -205,17 +205,17 @@
 					<option value="yellow">
 				</datalist>
 				<div>
-					<label><input type="checkbox" id="namebold" name="namebold">Bold</label>
-					<label><input type="checkbox" id="nameitalic" name="nameitalic">Italic</label>
-					<label><input type="checkbox" id="nameobfuscated" name="nameobfuscated">Obfuscated</label>
-					<label><input type="checkbox" id="namestrikethrough" name="namestrikethrough">Strikethrough</label>
+					<label><input type="checkbox" id="namebold" name="namebold">加粗</label>
+					<label><input type="checkbox" id="nameitalic" name="nameitalic">斜体</label>
+					<label><input type="checkbox" id="nameobfuscated" name="nameobfuscated">混乱</label>
+					<label><input type="checkbox" id="namestrikethrough" name="namestrikethrough">删除线</label>
 				</div>
 			</div>
         </div>
 
         <div class="padding">
             <!-- THANK YOU to reddit user Oozebull for this part. -->
-            <label><input type="checkbox" name="usedisabledslots">Lock Slot Interaction</label>
+            <label><input type="checkbox" name="usedisabledslots">锁定槽位选项</label>
             <div id="disabledslots">
                 <div>
                     <span class="first">&nbsp;</span>
@@ -227,7 +227,7 @@
                 </div>
 
                 <div>
-                    <span class="first">Remove</span>
+                    <span class="first">移除</span>
                     <span><input id="dH" type="checkbox"></input></span>
                     <span><input id="dC" type="checkbox"></input></span>
                     <span><input id="dL" type="checkbox"></input></span>
@@ -235,7 +235,7 @@
                     <span><input id="dW" type="checkbox"></input></span>
                 </div>
                 <div>
-                    <span class="first">Replace</span>
+                    <span class="first">交换</span>
                     <span><input id="rH" type="checkbox"></input></span>
                     <span><input id="rC" type="checkbox"></input></span>
                     <span><input id="rL" type="checkbox"></input></span>
@@ -243,7 +243,7 @@
                     <span><input id="rW" type="checkbox"></input></span>
                 </div>
                 <div>
-                    <span class="first">Place</span>
+                    <span class="first">放置</span>
                     <span><input id="pH" type="checkbox"></input></span>
                     <span><input id="pC" type="checkbox"></input></span>
                     <span><input id="pL" type="checkbox"></input></span>
@@ -254,51 +254,52 @@
         </div>
 
         <div class="code">
-            <div id="code-copy-hint">click to copy</div>
+            <div id="code-copy-hint">点击复制</div>
             <div id="code"></div>
         </div>
         <div id="codeinfo" class="padding">
-            <b>Please note:</b>
-            This command is too long to be executed from chat. You need to place it inside a command block. (see below)
+            <b>请注意:</b>
+            这些命令在聊天框内输入可能无法完全执行。你需要将命令放在命令方块内运行。(看下面)
         </div>
 
     </div>
 
     <div class="right card">
         <span style="cursor: pointer;" onclick="javascript:$('#saveandload').slideToggle();">
-            + Save and Load
+            + 保存和加载
         </span>	
         <div id="saveandload">
             <div class="padding">
                 <div id="save" class="padding underline">
                     <p>
-                        Save your current armor stand creation
+                        保存您当前的作品
                     </p>
                     <input type="text" name="creationname" id="creationname" placeholder="My armor stand"/>
-                    <button style="display:inline-block" id="savecreation" onclick="javascript:saveData();">Save Creation</button><br>
+                    <button style="display:inline-block" id="savecreation" onclick="javascript:saveData();">保存作品</button><br>
                 </div>
                 <div id="load" class="padding underline">
                     <p id="loadmessage">
-                        Load your saved creations
+                        加载您保存的作品
                     </p>
                     <div id="loadlistopts">
                         <select id="loadlist"></select>
-                        <button id="loadcreation" style="display:inline-block;" onclick="javascript:loadData($(`#loadlist`).val());">Load Creation</button>
-                        <button id="deletesave" style="display:inline-block;" onclick="javascript:deleteSave($(`#loadlist`).val());">Delete Creation</button><br>
+                        <button id="loadcreation" style="display:inline-block;" onclick="javascript:loadData($(`#loadlist`).val());">加载作品</button>
+                        <button id="deletesave" style="display:inline-block;" onclick="javascript:deleteSave($(`#loadlist`).val());">删除作品</button><br>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <div class="right card">
         <span style="cursor: pointer;" onclick="javascript:$('#getcommandblock').slideToggle();">
-            + Obtain a command block
+            + 获得命令方块
         </span>	
         <br>
         <div id="getcommandblock">
             <div class="padding">
-                If your command is longer than 256 characters (100 before Minecraft 1.11), it needs to be executed with a <i>command block</i>. Obtain one by typing:
+                如果您的指令大于255个字符(在Minecraft 1.11前是100个字符), 需要使用<i>命令方块</i>执行。通过指令获取一个命令方块:
             </div>
             <div class="code">
                 /give @p minecraft:command_block
@@ -306,14 +307,17 @@
         </div>
     </div>
 
+
     <div class="right card">
         <span class="" style="cursor: pointer;" onclick="javascript:$('#troubleshooting').slideToggle();">
-        + Troubleshooting
+        + 解决问题
         </span>
         <div id="troubleshooting">
             <p>
-                <b>This thing uses WebGL!</b>
-                If you don't see anything on the left enable WebGL in your browser or visit the <a href="http://get.webgl.org/">official WebGL website</a> to troubleshoot problems.
+                <b>这个工具使用WebGL!</b>
+                如果你在左边看不到任何东西，请在您的浏览器中启用WebGL，或者查看<a href="http://get.webgl.org/">WebGL官网</a>以解决问题
+                <br><br>
+                <b>汉化 By <a href="https://blog.blingwang.cn">BlingWang</a></b>
             </p>
         </div>
     </div>

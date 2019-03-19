@@ -183,13 +183,13 @@ $(document).ready(function(){
 });
 
 function loadScreen() {
-	$(`#creationname`).attr(`placeholder`, `My Armor Stand #${localStorage.length + 1}`);
+	$(`#creationname`).attr(`placeholder`, `作品 #${localStorage.length + 1}`);
 	if (!localStorage.length) {
 		$(`#loadlistopts`).hide();
-		$(`#loadmessage`).text(`You do not have any creations to load!`);
+		$(`#loadmessage`).text(`您目前没有作品可以加载!`);
 	} else {
 		$(`#loadlistopts`).show();
-		$(`#loadmessage`).text(`Load your saved creations`);
+		$(`#loadmessage`).text(`加载您保存的作品`);
 		$(`#loadlist`).empty();
 		for (let i = 0; i < localStorage.length; i++) {
 			$(`#loadlist`).append(`<option value="${localStorage.key(i)}">${localStorage.key(i)}</option>`);
@@ -965,13 +965,13 @@ function saveData() {
 	localStorage.setItem(SAVE_DATA.name, JSON.stringify(SAVE_DATA));
 	loadScreen();
 	$(`#creationname`).val(``);
-	alert(`Awesome! Your creation has been saved as ${SAVE_DATA.name}.`);
+	alert(`很好! 您的作品已保存为 ${SAVE_DATA.name}。`);
 };
 
 function loadData(data) {
 	//console.log(`loading data!`);
 	data = localStorage.getItem(data);
-	if (!data) return alert(`An error occurred while loading the creation.`);
+	if (!data) return alert(`在加载作品的时候出现了一个问题。`);
 	
 	try {
 		data = JSON.parse(data);
@@ -1070,7 +1070,7 @@ function loadData(data) {
 		//console.log(`done loading!`)
 	} catch (err) {
 		console.error(err);
-		alert(`An error occurred while loading the creation.`);
+		alert(`在加载作品的时候出现了一个问题。`);
 	};
 	
 	//loadScreen();
@@ -1079,5 +1079,5 @@ function loadData(data) {
 function deleteSave(data) {
 	localStorage.removeItem(data);
 	loadScreen();
-	alert(`${data} has been deleted!`);
+	alert(`${data} 已经被删除!`);
 };
